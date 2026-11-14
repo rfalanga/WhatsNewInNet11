@@ -9,11 +9,11 @@ foreach (var pet in pets)
 {
     var description = pet switch
     {
-        Dog d => $"Dog named {d.Name}",
-        Cat c => $"Cat described as {c.Adjective}",
-        Bird b => $"Bird of species {b.Species}",
-        Shark s => $"Shark with {s.Teeth} teeth",
-        _ => "Unknown pet"
+        Dog dog => dog.Name,
+        Cat(var adjective) => $"A {adjective} cat",
+        Bird { Species: var species } => $"A {species}",
+        Shark(var teeth) => $"{new('A', teeth)} shark!",
+        _ => "Unknown pet"  // This line was not in the demo code, GitHub Copilot added it 
     };
     Console.WriteLine(description);
 }
