@@ -10,14 +10,17 @@ foreach (var pet in pets)
     {
         Dog dog => dog.Name,
         Cat(var adjective) => $"A {adjective} cat",
-        Bird { Species: var species } => $"A {species}"
+        Bird { Species: var species } => $"A {species}",
+        null => "No pet"
     };
     Console.WriteLine(description);
 }
 
 // Adding a union
 
-union Pet(Dog, Cat, Bird);  //these arguments are called case types, and they are the types that make up the union. The union type is called Pet, and it can be either a Dog, a Cat, or a Bird.
+union Pet(Dog, Cat?, Bird);  //these arguments are called case types, and they are the types that make up the union. The union type is called Pet, and it can be either a Dog, a Cat, or a Bird.
+
+
 
 public record class Dog(string Name);
 public record struct Cat(string Adjective);
