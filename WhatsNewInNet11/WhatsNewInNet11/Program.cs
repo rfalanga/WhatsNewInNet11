@@ -11,7 +11,7 @@ foreach (var pet in pets)
         Dog dog => dog.Name,
         Cat(var adjective) => $"A {adjective} cat",
         Bird { Species: var species } => $"A {species}",
-        null => "No pet"
+        null => "😾"
     };
     Console.WriteLine(description);
 }
