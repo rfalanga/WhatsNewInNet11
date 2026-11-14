@@ -1,10 +1,9 @@
-﻿List<object> pets = new()
-{
+﻿List<object> pets = [
     new Dog("Fido"),
     new Cat("Fluffy"),
     new Bird { Species = "Parrot" },
     new Shark(300)
-};
+];
 
 foreach (var pet in pets)
 {
