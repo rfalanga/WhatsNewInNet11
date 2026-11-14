@@ -20,7 +20,7 @@ static int Compute(Operation op)
 
 Console.WriteLine(Compute(new Add(new Number(19), new Number(23))));
 
-public abstract record class Operation;
+public closed record class Operation;
 
 public sealed record class Number(int Value) : Operation;
 public sealed record class Add(Operation Op1, Operation Op2) : Operation;
