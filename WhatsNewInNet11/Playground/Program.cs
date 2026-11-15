@@ -6,20 +6,20 @@ HashSet<string> tags = [with(StringComparer.OrdinalIgnoreCase), "one", "two"];
 
 #region Goodies #2
 
-loop_i: for (int i = 0; i < 19; i++)
+outer: for (int i = 0; i < 19; i++)
 {
     for (int j = 0; j < 23; j++)
     {
         if ((i + j) % 2 == 0)
         {
-            break loop_i;
+            break outer;
         }
     }
 }
 
 #endregion
 
-    static int Compute(Operation op)
+static int Compute(Operation op)
 {
     return op switch
     {
