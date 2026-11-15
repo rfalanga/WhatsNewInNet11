@@ -1,9 +1,10 @@
-﻿Console.WriteLine("Hello, World!");
+﻿#region Goodies #1
 
+HashSet<string> tags = new(StringComparer.OrdinalIgnoreCase);
+tags.Add("one");
+tags.Add("two");
 
-
-
-
+#endregion
 
 
 static int Compute(Operation op)
