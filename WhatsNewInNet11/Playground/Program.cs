@@ -4,8 +4,29 @@ HashSet<string> tags = [with(StringComparer.OrdinalIgnoreCase), "one", "two"];
 
 #endregion
 
+#region Goodies #2
 
-static int Compute(Operation op)
+for (int i = 0; i < 19; i++)
+{
+    bool done = false;
+    for (int j = 0; j < 23; j++)
+    {
+        if ((i + j) % 2 == 0)
+        {
+            done = true;
+            break;
+        }
+    }
+
+    if (done)
+    {
+        break;
+    }
+}
+
+#endregion
+
+    static int Compute(Operation op)
 {
     return op switch
     {
