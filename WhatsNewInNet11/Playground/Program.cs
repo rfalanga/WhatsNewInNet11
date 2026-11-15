@@ -1,8 +1,6 @@
 ﻿#region Goodies #1
 
-HashSet<string> tags = new(StringComparer.OrdinalIgnoreCase);
-tags.Add("one");
-tags.Add("two");
+HashSet<string> tags = [with(StringComparer.OrdinalIgnoreCase), "one", "two"];
 
 #endregion
 
