@@ -6,21 +6,14 @@ HashSet<string> tags = [with(StringComparer.OrdinalIgnoreCase), "one", "two"];
 
 #region Goodies #2
 
-for (int i = 0; i < 19; i++)
+loop_i: for (int i = 0; i < 19; i++)
 {
-    bool done = false;
     for (int j = 0; j < 23; j++)
     {
         if ((i + j) % 2 == 0)
         {
-            done = true;
-            break;
+            break loop_i;
         }
-    }
-
-    if (done)
-    {
-        break;
     }
 }
 
